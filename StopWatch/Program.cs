@@ -7,12 +7,11 @@ namespace StopWatch
     {
         static void Main(string[] args)
         {
-            Start();
+            Start(15);
         }
 
-        static void Start()
+        static void Start(int time)
         {
-            int time = 10;
             int currentTime = 0;
 
             while (currentTime != time)
@@ -22,6 +21,9 @@ namespace StopWatch
                 Console.WriteLine(currentTime);
                 Thread.Sleep(1000);
             }
+            Console.Clear();
+            Console.Write("Stopwatch finished");
+            Thread.Sleep(2000);
         }
     }
 }
