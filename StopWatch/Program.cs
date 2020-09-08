@@ -7,7 +7,20 @@ namespace StopWatch
     {
         static void Main(string[] args)
         {
-            Start(15);
+            Menu();
+        }
+
+        static void Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("Choise between:");
+            Console.WriteLine("s = Seconds, like 10s");
+            Console.WriteLine("m = Minutes, like 10m");
+            Console.WriteLine("0 = exit");
+            Console.WriteLine("How long do you want to count ?");
+
+            string data = Console.ReadLine().ToLower();
+            Console.WriteLine(data);
         }
 
         static void Start(int time)
