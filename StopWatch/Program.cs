@@ -20,6 +20,7 @@ namespace StopWatch
             Console.WriteLine("How long do you want to count ?");
 
             string data = Console.ReadLine().ToLower();
+            char type = char.Parse(data.Substring(data.Length - 1, 1));
             Console.WriteLine(data);
         }
 
