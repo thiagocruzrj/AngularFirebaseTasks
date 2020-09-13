@@ -34,7 +34,15 @@ namespace TextEditor
 
         static void Edit()
         {
+            Console.Clear();
+            Console.WriteLine("Type your text below (Type Escape to exit/Save)");
+            Console.WriteLine("---------------------");
+            string text = "";
 
+            while (Console.ReadKey().Key != ConsoleKey.Escape)
+            {
+
+            }
         }
     }
 }
