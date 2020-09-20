@@ -5,14 +5,19 @@ namespace HtmlEditor
 {
     public class Viewer
     {
-        public static void Show()
+        public static void Show(string text)
         {
             Console.Clear();
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
-            Console.WriteLine("Visulization mode");
-            Console.WriteLine("-----------");
+            Console.WriteLine("MODO VISUALIZAÇÃO");
+            Console.WriteLine("----------------------------------------");
+            Replace(text);
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("Pressione qualquer tecla para voltar ao menu");
+            Console.ReadKey();
+            Menu.Show();
         }
 
         public static void Replace(string text)
