@@ -38,6 +38,10 @@ namespace MyApp
             var textEquals = "This text is a test";
             Console.WriteLine(textEquals.Equals("This text is a test"));
             Console.WriteLine(textEquals.Equals("his text is a test"));
+
+            var textIndex = "This text is a test";
+            Console.WriteLine(textIndex.IndexOf("test"));
+            Console.WriteLine(textIndex.LastIndexOf("t"));
         }
     }
 }
