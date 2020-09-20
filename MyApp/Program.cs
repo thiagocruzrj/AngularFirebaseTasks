@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace MyApp
 {
@@ -66,6 +67,14 @@ namespace MyApp
 
             Console.WriteLine(textIndex.Trim());
 
+            var newText = new StringBuilder();
+            newText.Append("This is a new text");
+            newText.Append("This is a ");
+            newText.Append("This is a text ");
+            newText.Append("new text");
+            newText.Append("This text");
+            
+            Console.WriteLine(newText);
         }
     }
 }
