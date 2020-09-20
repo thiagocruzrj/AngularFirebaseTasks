@@ -13,16 +13,12 @@ namespace HtmlEditor
             WriteOptions();
 
             var option = short.Parse(Console.ReadLine());
+            HandleMenuOption(option);
         }
 
         public static void DrawScreen()
         {
-            Console.Write("+");
-            for(int i = 0; i <= 30; i++)
-                Console.Write("-");
-            
-            Console.Write("+");
-            Console.Write("\n");
+            DrawingHeaderFooter();
 
             for (int lines = 0; lines <= 10; lines++)
             {
@@ -33,13 +29,7 @@ namespace HtmlEditor
                 Console.Write("|");
                 Console.Write("\n");
             }
-            
-            Console.Write("+");
-            for(int i = 0; i <= 30; i++)
-                Console.Write("-");
-            
-            Console.Write("+");
-            Console.Write("\n");
+            DrawingHeaderFooter();
         }
 
         public static void WriteOptions()
@@ -58,6 +48,32 @@ namespace HtmlEditor
             Console.WriteLine("0 - Exit");
             Console.SetCursorPosition(3, 10);
             Console.Write("Option: ");
+        }
+
+        private static void DrawingHeaderFooter()
+        {
+            Console.Write("+");
+            for(int i = 0; i <= 30; i++)
+                Console.Write("-");
+            
+            Console.Write("+");
+            Console.Write("\n");
+        }
+
+        public static void HandleMenuOption(short option)
+        {
+            switch(option)
+            {
+                case 1: Console.WriteLine("Editor"); break;
+                case 2: Console.WriteLine("View"); break;
+                case 0: 
+                {
+                    Console.Clear();
+                    Environment.Exit(0);
+                    break;
+                }
+                default: Show(); break;
+            }
         }
     }
 }
