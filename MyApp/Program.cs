@@ -42,6 +42,8 @@ namespace MyApp
             var textIndex = "This text is a test";
             Console.WriteLine(textIndex.IndexOf("test"));
             Console.WriteLine(textIndex.LastIndexOf("t"));
+            Console.WriteLine(textIndex.ToLower());
+            Console.WriteLine(textIndex.ToUpper());
         }
     }
 }
