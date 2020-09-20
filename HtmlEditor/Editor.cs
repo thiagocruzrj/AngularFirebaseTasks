@@ -11,8 +11,8 @@ namespace HtmlEditor
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
-            Console.WriteLine("Editor Mode");
-            Console.WriteLine("-----------");
+            Console.WriteLine("MODO EDITOR");
+            Console.WriteLine("----------------------------------------");
             Start();
         }
 
@@ -20,14 +20,15 @@ namespace HtmlEditor
         {
             var file = new StringBuilder();
 
-            do {
+            do
+            {
                 file.Append(Console.ReadLine());
                 file.Append(Environment.NewLine);
-
-            } while (Console.ReadKey().Key != ConsoleKey.Escape);
-
-            Console.WriteLine("---------------");
-            Console.WriteLine("Do you want save the file ?");
+            }
+            while (Console.ReadKey().Key != ConsoleKey.Escape);
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("Deseja salvar este arquivo?");
+            Viewer.Show(file.ToString());
         }
     }
 }
