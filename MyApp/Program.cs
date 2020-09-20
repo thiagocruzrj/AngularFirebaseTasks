@@ -25,17 +25,19 @@ namespace MyApp
             Console.WriteLine(compareText.CompareTo("testing"));
 
             var testText = "This text is a test";
-            var testChar = 't';
             Console.WriteLine(testText.Contains("test"));
             Console.WriteLine(testText.Contains("Test"));
             Console.WriteLine(testText.Contains("Test", StringComparison.OrdinalIgnoreCase));
-            Console.WriteLine(testText.Contains('t'));
 
             var textWith = "This text is a test";
-            Console.WriteLine(text.StartsWith("This"));
-            Console.WriteLine(text.StartsWith("this"));
-            Console.WriteLine(text.EndsWith("this"));
-            Console.WriteLine(text.EndsWith("this"));
+            Console.WriteLine(textWith.StartsWith("This"));
+            Console.WriteLine(textWith.StartsWith("this"));
+            Console.WriteLine(textWith.EndsWith("this"));
+            Console.WriteLine(textWith.EndsWith("this"));
+            
+            var textEquals = "This text is a test";
+            Console.WriteLine(textEquals.Equals("This text is a test"));
+            Console.WriteLine(textEquals.Equals("his text is a test"));
         }
     }
 }
