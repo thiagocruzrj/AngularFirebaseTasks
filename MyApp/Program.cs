@@ -25,8 +25,11 @@ namespace MyApp
             Console.WriteLine(compareText.CompareTo("testing"));
 
             var testText = "This text is a test";
+            var testChar = 't';
             Console.WriteLine(testText.Contains("test"));
             Console.WriteLine(testText.Contains("Test"));
+            Console.WriteLine(testText.Contains("Test", StringComparison.OrdinalIgnoreCase));
+            Console.WriteLine(testText.Contains('t'));
         }
     }
 }
