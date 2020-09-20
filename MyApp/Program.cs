@@ -10,6 +10,11 @@ namespace MyApp
             id.ToString();
             id = new Guid("163fde36-c352-418f-85de-4c48663ad786");
             Console.WriteLine(id);
+
+            var price = 10.2;
+            var text = "Product price is " + price;
+
+            Console.WriteLine(text);
         }
     }
 }
