@@ -23,6 +23,10 @@ namespace MyApp
             var compareText = "Testing";
             Console.WriteLine(compareText.CompareTo("Testing"));
             Console.WriteLine(compareText.CompareTo("testing"));
+
+            var testText = "This text is a test";
+            Console.WriteLine(testText.Contains("test"));
+            Console.WriteLine(testText.Contains("Test"));
         }
     }
 }
