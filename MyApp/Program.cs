@@ -14,9 +14,11 @@ namespace MyApp
             var price = 10.2;
             var text = "Product price is " + price;
             var secText = string.Format("Product price is {0} only in promotion", price);
+            var thirdText = $"Product price is {price} only in promotion";
 
             Console.WriteLine(text);
             Console.WriteLine(secText);
+            Console.WriteLine(thirdText);
         }
     }
 }
