@@ -49,7 +49,23 @@ namespace MyApp
             Console.WriteLine(textIndex.Insert(5, "good "));
 
             Console.WriteLine(textIndex.Remove(5));
-            
+            Console.WriteLine(textIndex.Replace("This", "Amazing"));
+            Console.WriteLine(textIndex.Replace("t", "x"));
+
+            var division = textIndex.Split(" ");
+            Console.WriteLine(division[0]);
+            Console.WriteLine(division[1]);
+            Console.WriteLine(division[2]);
+            Console.WriteLine(division[3]);
+            Console.WriteLine(division[4]);
+
+            var result = textIndex.Substring(5, 4);
+            var result2 = textIndex.Substring(5, textIndex.LastIndexOf("a"));
+            Console.WriteLine(result);
+            Console.WriteLine(result2);
+
+            Console.WriteLine(textIndex.Trim());
+
         }
     }
 }
