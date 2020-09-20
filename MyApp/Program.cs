@@ -30,6 +30,12 @@ namespace MyApp
             Console.WriteLine(testText.Contains("Test"));
             Console.WriteLine(testText.Contains("Test", StringComparison.OrdinalIgnoreCase));
             Console.WriteLine(testText.Contains('t'));
+
+            var textWith = "This text is a test";
+            Console.WriteLine(text.StartsWith("This"));
+            Console.WriteLine(text.StartsWith("this"));
+            Console.WriteLine(text.EndsWith("this"));
+            Console.WriteLine(text.EndsWith("this"));
         }
     }
 }
