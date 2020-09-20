@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace HtmlEditor
 {
@@ -17,7 +18,16 @@ namespace HtmlEditor
 
         public static void Start()
         {
+            var file = new StringBuilder();
 
+            do {
+                file.Append(Console.ReadLine());
+                file.Append(Environment.NewLine);
+
+            } while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+            Console.WriteLine("---------------");
+            Console.WriteLine("Do you want save the file ?");
         }
     }
 }
