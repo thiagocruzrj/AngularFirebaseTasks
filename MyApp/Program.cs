@@ -19,6 +19,10 @@ namespace MyApp
             Console.WriteLine(text);
             Console.WriteLine(secText);
             Console.WriteLine(thirdText);
+
+            var compareText = "Testing";
+            Console.WriteLine(compareText.CompareTo("Testing"));
+            Console.WriteLine(compareText.CompareTo("testing"));
         }
     }
 }
