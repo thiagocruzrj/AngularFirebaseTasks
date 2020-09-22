@@ -23,6 +23,9 @@ namespace MyApp2
             Console.WriteLine(DateTime.Now.ToString("D", br));
             Console.WriteLine(DateTime.Now.ToString("D", eu));
             Console.WriteLine(DateTime.Now.ToString("D", de));
+
+            var dateTime = DateTime.UtcNow;
+            Console.WriteLine(dateTime);
         }
     }
 }
