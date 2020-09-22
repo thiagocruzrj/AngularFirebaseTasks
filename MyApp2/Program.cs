@@ -9,8 +9,8 @@ namespace MyApp2
             Console.Clear();
             var data = DateTime.Now;
 
-            var format = string.Format("{0}", data);
-            Console.WriteLine(format);
+            var formatY = string.Format("{0:yyyy/MM/dd hh:mm:ss}", data);
+            Console.WriteLine(formatY);
         }
     }
 }
