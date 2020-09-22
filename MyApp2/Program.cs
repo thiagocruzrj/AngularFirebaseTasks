@@ -42,6 +42,13 @@ namespace MyApp2
                 Console.WriteLine(TimeZoneInfo.ConvertTimeFromUtc(utcDate, timezone));
                 Console.WriteLine("-----------");
             }
+
+            Console.WriteLine(DateTime.DaysInMonth(2020, 2));
+
+            static bool IsWeekend(DayOfWeek today)
+            {
+                return today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
+            }
         }
     }
 }
