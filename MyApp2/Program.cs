@@ -28,10 +28,20 @@ namespace MyApp2
             Console.WriteLine(utcDate);
 
             Console.WriteLine(utcDate.ToLocalTime());
-            var timezoneAustralia = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Auckland");
-            var hourAustralia = TimeZoneInfo.ConvertTimeToUtc(utcDate, timezoneAustralia);
-            Console.WriteLine(hourAustralia);
-            Console.WriteLine(timezoneAustralia);
+            // var timezoneAustralia = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Auckland");
+            // var hourAustralia = TimeZoneInfo.ConvertTimeToUtc(utcDate, timezoneAustralia);
+            // Console.WriteLine(hourAustralia);
+            // Console.WriteLine(timezoneAustralia);
+
+            var timezones = TimeZoneInfo.GetSystemTimeZones();
+
+            foreach(var timezone in timezones)
+            {
+                Console.WriteLine(timezone.Id);
+                Console.WriteLine(timezone);
+                Console.WriteLine(TimeZoneInfo.ConvertTimeFromUtc(utcDate, timezone));
+                Console.WriteLine("-----------");
+            }
         }
     }
 }
