@@ -7,9 +7,9 @@ namespace MyApp2
         static void Main(string[] args)
         {
             Console.Clear();
-            var data = new DateTime();
-            var actualDatetime = DateTime.Now;
-            Console.WriteLine(actualDatetime);
+            var data = new DateTime(2020, 10, 12, 8, 23, 14);
+            //var actualDatetime = DateTime.Now;
+            Console.WriteLine(data);
         }
     }
 }
