@@ -6,7 +6,10 @@ namespace MyApp2
     {
         static void Main(string[] args)
         {
-            
+            Console.Clear();
+            var data = new DateTime();
+            var actualDatetime = DateTime.Now;
+            Console.WriteLine(actualDatetime);
         }
     }
 }
