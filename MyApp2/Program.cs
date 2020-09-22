@@ -9,8 +9,9 @@ namespace MyApp2
             Console.Clear();
             var data = DateTime.Now;
 
-            var formatY = string.Format("{0:yyyy/MM/dd hh:mm:ss zzz}", data);
-            Console.WriteLine(formatY);
+            Console.WriteLine(data.AddDays(12));
+            Console.WriteLine(data.AddMonths(2));
+            Console.WriteLine(data.AddYears(1));
         }
     }
 }
