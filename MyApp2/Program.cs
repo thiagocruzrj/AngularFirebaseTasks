@@ -24,8 +24,14 @@ namespace MyApp2
             Console.WriteLine(DateTime.Now.ToString("D", eu));
             Console.WriteLine(DateTime.Now.ToString("D", de));
 
-            var dateTime = DateTime.UtcNow;
-            Console.WriteLine(dateTime);
+            var utcDate = DateTime.UtcNow;
+            Console.WriteLine(utcDate);
+
+            Console.WriteLine(utcDate.ToLocalTime());
+            var timezoneAustralia = TimeZoneInfo.FindSystemTimeZoneById("Pacific/Auckland");
+            var hourAustralia = TimeZoneInfo.ConvertTimeToUtc(utcDate, timezoneAustralia);
+            Console.WriteLine(hourAustralia);
+            Console.WriteLine(timezoneAustralia);
         }
     }
 }
