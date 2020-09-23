@@ -27,6 +27,12 @@ namespace Exceptions
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Fail to save the text");
             }
+            catch(MyException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.WhenHappened);
+                Console.WriteLine("Custom Exception");
+            }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
@@ -37,7 +43,17 @@ namespace Exceptions
         static void Save(string text)
         {
             if(string.IsNullOrEmpty(text))
-                throw new ArgumentNullException("Text can't be null or empty");
+                throw new MyException(DateTime.Now);
+        }
+
+        public class MyException : Exception
+        {
+            public DateTime WhenHappened { get; set; }
+
+            public MyException(DateTime whenHappened)
+            {
+                WhenHappened = whenHappened;
+            }
         }
     }
 }
