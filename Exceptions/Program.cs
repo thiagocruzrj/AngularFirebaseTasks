@@ -8,9 +8,16 @@ namespace Exceptions
         {
             var arr = new int[3];
 
-            for (int i = 0; i < 10; i++)
+            try
             {
-                System.Console.WriteLine(arr[i]);
+                for (int i = 0; i < 10; i++)
+                {
+                    System.Console.WriteLine(arr[i]);
+                }
+            }
+            catch
+            {
+                System.Console.WriteLine("Something wrong");
             }
         }
     }
