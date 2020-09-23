@@ -6,7 +6,12 @@ namespace Exceptions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var arr = new int[3];
+
+            for (int i = 0; i < 10; i++)
+            {
+                System.Console.WriteLine(arr[i]);
+            }
         }
     }
 }
