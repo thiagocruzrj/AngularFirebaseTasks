@@ -19,7 +19,12 @@ namespace Lists
             Console.WriteLine(newArray2[3]);
             Console.WriteLine(newArray2.Length);
 
-            Console.WriteLine(newStructArray[3]);
+            //Console.WriteLine(newStructArray[3]);
+
+            foreach (var index in newArray2)
+            {
+                Console.WriteLine(index);
+            } 
 
             for (var index = 0; index < newArray2.Length ; index++)
             {
