@@ -15,10 +15,15 @@ namespace Exceptions
                     System.Console.WriteLine(arr[i]);
                 }
             }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Not found the index on list");
+            }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                Console.WriteLine("Something wrong", ex);
+                Console.WriteLine("Something wrong");
             }
         }
     }
