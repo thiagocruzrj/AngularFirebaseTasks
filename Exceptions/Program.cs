@@ -37,6 +37,10 @@ namespace Exceptions
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Something wrong");
+            } 
+            finally 
+            {
+                Console.WriteLine("End");
             }
         }
 
