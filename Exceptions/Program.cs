@@ -10,11 +10,13 @@ namespace Exceptions
 
             try
             {
-                for (int i = 0; i < 10; i++)
-                {
-                    System.Console.WriteLine(arr[i]);
-                }
+            //     for (int i = 0; i < 10; i++)
+            //     {
+            //         System.Console.WriteLine(arr[i]);
+            //     }
+                Save("");
             }
+
             catch(IndexOutOfRangeException ex)
             {
                 Console.WriteLine(ex.Message);
@@ -25,6 +27,12 @@ namespace Exceptions
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Something wrong");
             }
+        }
+
+        static void Save(string text)
+        {
+            if(string.IsNullOrEmpty(text))
+                throw new Exception("Text can't be null or empty");
         }
     }
 }
