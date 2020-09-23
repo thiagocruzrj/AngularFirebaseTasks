@@ -22,6 +22,11 @@ namespace Exceptions
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Not found the index on list");
             }
+            catch(ArgumentNullException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Fail to save the text");
+            }
             catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
@@ -32,7 +37,7 @@ namespace Exceptions
         static void Save(string text)
         {
             if(string.IsNullOrEmpty(text))
-                throw new Exception("Text can't be null or empty");
+                throw new ArgumentNullException("Text can't be null or empty");
         }
     }
 }
