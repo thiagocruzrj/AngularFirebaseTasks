@@ -15,9 +15,10 @@ namespace Exceptions
                     System.Console.WriteLine(arr[i]);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-                System.Console.WriteLine("Something wrong");
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Something wrong", ex);
             }
         }
     }
