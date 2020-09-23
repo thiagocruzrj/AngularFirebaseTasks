@@ -21,14 +21,24 @@ namespace Lists
 
             //Console.WriteLine(newStructArray[3]);
 
-            foreach (var index in newArray2)
-            {
-                Console.WriteLine(index);
-            } 
+            // foreach (var index in newArray2)
+            // {
+            //     Console.WriteLine(index);
+            // } 
 
-            for (var index = 0; index < newArray2.Length ; index++)
+            // for (var index = 0; index < newArray2.Length ; index++)
+            // {
+            //     Console.WriteLine(newArray2[index]);
+            // }
+
+            var employees = new Employee[3];
+            employees[0] = new Employee() { Id = Guid.NewGuid() };
+            employees[1] = new Employee() { Id = Guid.NewGuid() };
+            employees[2] = new Employee() { Id = Guid.NewGuid() };
+
+            foreach (var employee in employees)
             {
-                Console.WriteLine(newArray2[index]);
+                Console.WriteLine(employee.Id);
             }
         }
 
@@ -36,5 +46,10 @@ namespace Lists
         {
             public int Id { get; set; }
         }
+    }
+
+    public struct Employee
+    {
+        public Guid Id { get; set; }
     }
 }
